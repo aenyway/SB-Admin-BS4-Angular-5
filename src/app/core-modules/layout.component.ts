@@ -3,7 +3,7 @@ import {
     OnInit
 } from '@angular/core';
 import {
-    generateMockSideNavConfig,
+    generateMockedSideBarConfig,
     sideBarElementConfig
 } from './components';
 
@@ -14,7 +14,7 @@ import {
 })
 export class LayoutComponent implements OnInit {
 
-    sideBarConfig: Array<sideBarElementConfig> = generateMockSideNavConfig();
+    sideBarConfig: Array<sideBarElementConfig> = generateMockedSideBarConfig();
 
     constructor() {
     }

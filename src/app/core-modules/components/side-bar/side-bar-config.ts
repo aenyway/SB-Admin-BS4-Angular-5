@@ -1,23 +1,50 @@
 import { sideBarElementConfig } from '../side-bar-element/side-bar-element-config';
 
-export function generateMockSideNavConfig(): Array<sideBarElementConfig> {
+export function generateMockedSideBarConfig(): Array<sideBarElementConfig> {
     return [
         {
             title: 'Dashboard',
             routes: ['/dashboard'],
-            icon: 'fa fa-fw fa-dashboard'
+            icon: 'fa fa-fw fa-dashboard',
         },
         {
-            title: 'notifications',
+            title: 'EMI / Events',
+            routes: ['/emi'],
+            icon: 'fa fa-fw fa-flag-checkered',
+        },
+        {
+            title: 'Notifications',
             routes: ['/notifications'],
+            icon: 'fa fa-fw fa-bell-o',
+        },
+        {
+            title: 'Magazine',
+            routes: ['/magazine'],
+            icon: 'fa fa-fw fa-newspaper-o',
+        },
+        {
+            title: 'App-Management',
+            routes: ['/management'],
             items: [
                 {
-                    title: 'notifications/sub1',
-                    routes: ['/notifications/sub1'],
+                    title: 'Info',
+                    routes: ['/management/info'],
+                    icon: 'fa fa-fw fa-info',
                 },
                 {
-                    title: 'notifications/sub2',
-                    routes: ['/notifications/sub2'],
+                    title: 'Killswitches',
+                    routes: ['/management/kill-switches'],
+                    icon: 'fa fa-fw fa-window-close-o',
+                },
+                {
+                    title: 'MyContent',
+                    routes: ['/management/my-content'],
+                    icon: 'fa fa-fw fa-book',
+                },
+                {
+                    title: 'Events',
+                    routes: ['/management/events'],
+                    icon: 'fa fa-fw fa-flag-checkered',
                 },
             ]
         },
