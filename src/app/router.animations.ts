@@ -4,6 +4,10 @@ export function routerTransition() {
     return slideToTop();
 }
 
+export function routerLayoutTransition() {
+    return slideToRight();
+}
+
 export function slideToRight() {
     return trigger('routerTransition', [
         state('void', style({})),

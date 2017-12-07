@@ -1,0 +1,34 @@
+<div class="list-group" *ngIf="!configElement?.divider">
+    <div class="nested-menu" *ngIf="configElement?.items?.length">
+
+        <a class="list-group-item" (click)="addExpandClass(configElement.title)">
+            <span><i class="fa fa-plus"></i>&nbsp; {{configElement.title}}</span>
+        </a>
+
+        <div class="nested" [class.expand]="showMenu === configElement.title">
+            <ul class="submenu">
+                <li *ngFor="let subItem of configElement.items">
+                    <ng-container *ngTemplateOutlet="link; context: subItem"></ng-container>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div *ngIf="!configElement?.items?.length">
+        <ng-container *ngTemplateOutlet="link; context: configElement"></ng-container>
+    </div>
+
+</div>
+
+<ng-template #link let-routes="routes" let-title="title" let-icon="icon">
+    <a [routerLink]="routes"
+       [routerLinkActive]="['router-link-active']"
+       class="list-group-item">
+        <i class="{{icon}}"></i>&nbsp; {{ title }}
+    </a>
+</ng-template>
+
+<div class="list-group" *ngIf="configElement?.divider">
+    <hr>
+</div>

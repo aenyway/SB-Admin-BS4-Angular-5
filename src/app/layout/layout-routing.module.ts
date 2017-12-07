@@ -7,15 +7,22 @@ const routes: Routes = [
         path: '',
         component: LayoutComponent,
         children: [
-            { path: '', redirectTo: 'dashboard' },
-            { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
-            { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
-            { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
-            { path: 'forms', loadChildren: './form/form.module#FormModule' },
-            { path: 'bs-element', loadChildren: './bs-element/bs-element.module#BsElementModule' },
-            { path: 'grid', loadChildren: './grid/grid.module#GridModule' },
-            { path: 'components', loadChildren: './bs-component/bs-component.module#BsComponentModule' },
-            { path: 'blank-page', loadChildren: './blank-page/blank-page.module#BlankPageModule' }
+            { path: '', redirectTo: 'x-dashboard' },
+
+            { path: 'emi', loadChildren: '../cmp-modules/emi/emi.module#EmiModule' },
+            { path: 'management', loadChildren: '../cmp-modules/management/management.module#ManagementModule' },
+            { path: 'magazine', loadChildren: '../cmp-modules/magazine/magazine.module#MagazineModule' },
+            { path: 'dashboard', loadChildren: '../cmp-modules/dashboard/dashboard.module#DashboardModule' },
+            { path: 'notifications', loadChildren: '../cmp-modules/notifications/notifications.module#NotificationsModule' },
+
+            { path: 'x-dashboard', loadChildren: './examples/dashboard/dashboard.module#DashboardModule' },
+            { path: 'x-charts', loadChildren: './examples/charts/charts.module#ChartsModule' },
+            { path: 'x-tables', loadChildren: './examples/tables/tables.module#TablesModule' },
+            { path: 'x-forms', loadChildren: './examples/form/form.module#FormModule' },
+            { path: 'x-bs-element', loadChildren: './examples/bs-element/bs-element.module#BsElementModule' },
+            { path: 'x-grid', loadChildren: './examples/grid/grid.module#GridModule' },
+            { path: 'x-components', loadChildren: './examples/bs-component/bs-component.module#BsComponentModule' },
+            { path: 'x-blank-page', loadChildren: './examples/blank-page/blank-page.module#BlankPageModule' }
         ]
     }
 ];

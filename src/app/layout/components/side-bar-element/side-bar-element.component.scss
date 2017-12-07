@@ -1,0 +1,60 @@
+@import "~styles/library";
+
+.list-group {
+
+    & a.list-group-item {
+        background: $sidebar-background-color;
+        border: 0;
+        border-radius: 0;
+        color: $sidebar-link-color;
+        text-decoration: none;
+
+        & .fa {
+            margin-right: 10px;
+        }
+    }
+
+    & a:hover {
+        background: darken($sidebar-background-color, 5%);
+        color: $sidebar-link-color-hover;
+    }
+
+    & a.router-link-active {
+        background: darken($sidebar-background-color, 5%);
+        color: $sidebar-link-color-hover;
+    }
+}
+
+.nested-menu {
+
+    & .list-group-item {
+        cursor: pointer;
+    }
+
+    & .nested {
+        list-style-type: none;
+    }
+
+    & ul.submenu {
+        display: none;
+        height: 0;
+    }
+
+    & .expand {
+
+        & ul.submenu {
+            display: block;
+            list-style-type: none;
+            height: auto;
+
+            & li {
+
+                & a {
+                    color: $sidebar-link-color-hover;
+                    padding: 10px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
