@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import {
+    Component,
+    OnInit
+} from '@angular/core';
 
 @Component({
-  selector: 'cmp-admin-emi',
-  templateUrl: './emi.component.html',
-  styleUrls: ['./emi.component.scss']
+    selector: 'cmp-admin-emi',
+    templateUrl: './emi.component.html',
+    styleUrls: ['./emi.component.scss']
 })
 export class EmiComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

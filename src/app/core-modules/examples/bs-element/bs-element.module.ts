@@ -9,4 +9,5 @@ import { PageHeaderModule } from '../../../shared';
     imports: [CommonModule, BsElementRoutingModule, PageHeaderModule],
     declarations: [BsElementComponent]
 })
-export class BsElementModule {}
+export class BsElementModule {
+}

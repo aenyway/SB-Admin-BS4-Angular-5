@@ -2,11 +2,11 @@ $color-background-dark: #222;
 $color-text-on-dark: #fff;
 
 // header
-$header-background-color:$color-background-dark;
+$header-background-color: $color-background-dark;
 $header-link-color: transparentize($color-text-on-dark, 0.5);
 $header-link-color-hover: $color-text-on-dark;
 
 // sidebar
-$sidebar-background-color:$color-background-dark;
+$sidebar-background-color: $color-background-dark;
 $sidebar-link-color: transparentize($color-text-on-dark, 0.5);
 $sidebar-link-color-hover: $color-text-on-dark;

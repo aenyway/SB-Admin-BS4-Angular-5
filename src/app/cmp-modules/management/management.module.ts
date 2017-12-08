@@ -5,10 +5,11 @@ import { ManagementRoutingModule } from './management-routing.module';
 import { ManagementComponent } from './containers/management/management.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ManagementRoutingModule
-  ],
-  declarations: [ManagementComponent]
+    imports: [
+        CommonModule,
+        ManagementRoutingModule
+    ],
+    declarations: [ManagementComponent]
 })
-export class ManagementModule { }
+export class ManagementModule {
+}

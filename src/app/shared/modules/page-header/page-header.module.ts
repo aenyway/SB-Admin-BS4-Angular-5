@@ -9,4 +9,5 @@ import { PageHeaderComponent } from './page-header.component';
     declarations: [PageHeaderComponent],
     exports: [PageHeaderComponent]
 })
-export class PageHeaderModule {}
+export class PageHeaderModule {
+}

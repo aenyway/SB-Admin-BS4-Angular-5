@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+    Component,
+    OnInit
+} from '@angular/core';
 import { routerTransition } from '../../router.animations';
 
 @Component({
@@ -8,7 +11,9 @@ import { routerTransition } from '../../router.animations';
     animations: [routerTransition()]
 })
 export class SignupComponent implements OnInit {
-    constructor() {}
+    constructor() {
+    }
 
-    ngOnInit() {}
+    ngOnInit() {
+    }
 }

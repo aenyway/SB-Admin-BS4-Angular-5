@@ -5,10 +5,11 @@ import { NotificationsRoutingModule } from './notifications-routing.module';
 import { NotificationsComponent } from './containers/notifications/notifications.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    NotificationsRoutingModule
-  ],
-  declarations: [NotificationsComponent]
+    imports: [
+        CommonModule,
+        NotificationsRoutingModule
+    ],
+    declarations: [NotificationsComponent]
 })
-export class NotificationsModule { }
+export class NotificationsModule {
+}

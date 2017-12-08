@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import {
+    Component,
+    OnInit
+} from '@angular/core';
 
 @Component({
-  selector: 'cmp-admin-notifications',
-  templateUrl: './notifications.component.html',
-  styleUrls: ['./notifications.component.scss']
+    selector: 'cmp-admin-notifications',
+    templateUrl: './notifications.component.html',
+    styleUrls: ['./notifications.component.scss']
 })
 export class NotificationsComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

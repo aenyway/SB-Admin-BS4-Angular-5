@@ -5,10 +5,11 @@ import { EmiRoutingModule } from './emi-routing.module';
 import { EmiComponent } from './containers/emi/emi.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    EmiRoutingModule
-  ],
-  declarations: [EmiComponent]
+    imports: [
+        CommonModule,
+        EmiRoutingModule
+    ],
+    declarations: [EmiComponent]
 })
-export class EmiModule { }
+export class EmiModule {
+}

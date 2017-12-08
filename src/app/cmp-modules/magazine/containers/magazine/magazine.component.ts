@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import {
+    Component,
+    OnInit
+} from '@angular/core';
 
 @Component({
-  selector: 'cmp-admin-magazine',
-  templateUrl: './magazine.component.html',
-  styleUrls: ['./magazine.component.scss']
+    selector: 'cmp-admin-magazine',
+    templateUrl: './magazine.component.html',
+    styleUrls: ['./magazine.component.scss']
 })
 export class MagazineComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

@@ -5,10 +5,11 @@ import { MagazineRoutingModule } from './magazine-routing.module';
 import { MagazineComponent } from './containers/magazine/magazine.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MagazineRoutingModule
-  ],
-  declarations: [MagazineComponent]
+    imports: [
+        CommonModule,
+        MagazineRoutingModule
+    ],
+    declarations: [MagazineComponent]
 })
-export class MagazineModule { }
+export class MagazineModule {
+}

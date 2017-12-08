@@ -9,4 +9,5 @@ import { PageHeaderModule } from '../../../shared';
     imports: [CommonModule, GridRoutingModule, PageHeaderModule],
     declarations: [GridComponent]
 })
-export class GridModule {}
+export class GridModule {
+}

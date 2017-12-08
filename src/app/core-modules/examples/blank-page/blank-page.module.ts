@@ -8,4 +8,5 @@ import { BlankPageComponent } from './blank-page.component';
     imports: [CommonModule, BlankPageRoutingModule],
     declarations: [BlankPageComponent]
 })
-export class BlankPageModule {}
+export class BlankPageModule {
+}

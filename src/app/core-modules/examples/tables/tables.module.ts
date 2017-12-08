@@ -9,4 +9,5 @@ import { PageHeaderModule } from '../../../shared';
     imports: [CommonModule, TablesRoutingModule, PageHeaderModule],
     declarations: [TablesComponent]
 })
-export class TablesModule {}
+export class TablesModule {
+}

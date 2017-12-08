@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+    Component,
+    OnInit
+} from '@angular/core';
 
 @Component({
     selector: 'app-alert',
@@ -7,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlertComponent implements OnInit {
     alerts: Array<any> = [];
+
     constructor() {
         this.alerts.push({
             id: 1,
@@ -27,7 +31,8 @@ export class AlertComponent implements OnInit {
         });
     }
 
-    ngOnInit() { }
+    ngOnInit() {
+    }
 
     public closeAlert(alert: any) {
         const index: number = this.alerts.indexOf(alert);

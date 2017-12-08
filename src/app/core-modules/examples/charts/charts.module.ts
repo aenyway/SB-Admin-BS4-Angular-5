@@ -10,4 +10,5 @@ import { PageHeaderModule } from '../../../shared';
     imports: [CommonModule, Ng2Charts, ChartsRoutingModule, PageHeaderModule],
     declarations: [ChartsComponent]
 })
-export class ChartsModule {}
+export class ChartsModule {
+}

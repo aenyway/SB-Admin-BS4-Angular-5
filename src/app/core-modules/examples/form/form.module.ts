@@ -9,4 +9,5 @@ import { PageHeaderModule } from '../../../shared';
     imports: [CommonModule, FormRoutingModule, PageHeaderModule],
     declarations: [FormComponent]
 })
-export class FormModule {}
+export class FormModule {
+}
