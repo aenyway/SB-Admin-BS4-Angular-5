@@ -3,19 +3,19 @@
 :host {
 
     & .navbar {
-        background-color: $header-background-color;
+        background-color: $header-color-background;
 
         & .navbar-brand {
-            color: $header-link-color;
+            color: $header-color-link;
         }
 
         & .nav-item {
 
             & > a {
-                color: $header-link-color;
+                color: $header-color-link;
 
                 &:hover {
-                    color: $header-link-color-hover;
+                    color: $header-color-link-hover;
                 }
             }
         }

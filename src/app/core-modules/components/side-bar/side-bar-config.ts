@@ -84,12 +84,12 @@ export function generateMockedSideBarConfig(): Array<sideBarElementConfig> {
         {
             title: 'X components',
             routes: ['/x-components'],
-            icon: 'fa fa-th-list'
+            icon: 'fa fa-fw fa-th-list'
         },
         {
             title: 'X blank-page',
             routes: ['/x-blank-page'],
-            icon: 'fa fa-file-o'
+            icon: 'fa fa-fw fa-file-o'
         },
     ];
 }

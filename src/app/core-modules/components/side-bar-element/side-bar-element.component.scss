@@ -2,26 +2,30 @@
 
 .list-group {
 
-    & a.list-group-item {
-        background: $sidebar-background-color;
-        border: 0;
-        border-radius: 0;
-        color: $sidebar-link-color;
-        text-decoration: none;
+    & a {
 
-        & .fa {
-            margin-right: 10px;
+        &.list-group-item {
+            background: $sidebar-color-background;
+            border: 0;
+            border-radius: 0;
+            color: $sidebar-color-link;
+            text-decoration: none;
+            white-space: nowrap;
+
+            & .fa {
+                margin-right: 10px;
+            }
         }
-    }
 
-    & a:hover {
-        background: darken($sidebar-background-color, 5%);
-        color: $sidebar-link-color-hover;
-    }
+        &:hover {
+            background: darken($sidebar-color-background, 5%);
+            color: $sidebar-color-link-hover;
+        }
 
-    & a.router-link-active {
-        background: darken($sidebar-background-color, 5%);
-        color: $sidebar-link-color-hover;
+        &.router-link-active {
+            background: darken($sidebar-color-background, 5%);
+            color: $sidebar-color-link-hover;
+        }
     }
 }
 
@@ -50,7 +54,7 @@
             & li {
 
                 & a {
-                    color: $sidebar-link-color-hover;
+                    color: $sidebar-color-link-hover;
                     padding: 10px;
                     display: block;
                 }

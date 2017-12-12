@@ -2,7 +2,7 @@
     <div class="nested-menu" *ngIf="configElement?.items?.length">
 
         <a class="list-group-item" (click)="addExpandClass(configElement.title)">
-            <span><i class="fa fa-plus"></i>&nbsp; {{configElement.title}}</span>
+            <span><i class="fa fa-fw fa-plus"></i>&nbsp; {{configElement.title}}</span>
         </a>
 
         <div class="nested" [class.expand]="showMenu === configElement.title">

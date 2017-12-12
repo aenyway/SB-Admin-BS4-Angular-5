@@ -1,45 +1,44 @@
 @import "~styles/library";
 
 .sidebar {
-    border-radius: 0;
+    @include border-radius(0);
+    @include transition(all 0.2s ease-in-out);
+
     position: fixed;
     z-index: 1000;
-    top: 56px;
-    left: 235px;
-    width: 235px;
-    margin-left: -235px;
-    border: none;
-    border-radius: 0;
-    overflow-y: auto;
-    background-color: $sidebar-background-color;
+    top: $header-height;
+    left: $sidebar-width-closed;
     bottom: 0;
+    width: $sidebar-width-opened;
+    margin-left: -$sidebar-width-opened;
+    padding: {
+        left: $sidebar-width-opened;
+        bottom: 40px;
+    }
+    border: none;
+    background-color: $sidebar-color-background;
+    overflow-y: auto;
     overflow-x: hidden;
-    padding-bottom: 40px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
 
-    .sidebar-dropdown {
+    & .sidebar-dropdown {
 
-        *:focus {
+        & *:focus {
             border-radius: none;
             border: none;
         }
 
-        .panel-title {
+        & .panel-title {
             font-size: 1rem;
             height: 50px;
             margin-bottom: 0;
 
-            a {
-                color: $sidebar-link-color;
+            & a {
+                color: $sidebar-color-link;
                 text-decoration: none;
                 font-weight: 400;
-                background: $sidebar-background-color;
+                background: $sidebar-color-background;
 
-                span {
+                & span {
                     position: relative;
                     display: block;
                     padding: 0.75rem 1.5rem;
@@ -47,51 +46,56 @@
                 }
             }
 
-            a:hover,
-            a:focus {
-                color: $sidebar-link-color-hover;
-                outline: none;
-                outline-offset: -2px;
+            & a {
+                &:hover,
+                &:focus {
+                    color: $sidebar-color-link-hover;
+                    outline: none;
+                    outline-offset: -2px;
+                }
             }
         }
 
-        .panel-title:hover {
-            background: darken($sidebar-background-color, 5%);
+        & .panel-title:hover {
+            background: darken($sidebar-color-background, 5%);
         }
 
-        .panel-collapse {
+        & .panel-collapse {
             border-radious: 0;
             border: none;
 
-            .panel-body {
+            & .panel-body {
 
-                .list-group-item {
+                & .list-group-item {
                     border-radius: 0;
-                    background-color: $sidebar-background-color;
+                    background-color: $sidebar-color-background;
                     border: 0 solid transparent;
 
-                    a {
-                        color: $sidebar-link-color;
-                    }
+                    & a {
+                        color: $sidebar-color-link;
 
-                    a:hover {
-                        color: $sidebar-link-color-hover;
+                        &:hover {
+                            color: $sidebar-color-link-hover;
+                        }
                     }
                 }
 
-                .list-group-item:hover {
-                    background: darken($sidebar-background-color, 5%);
+                & .list-group-item{
+
+                    &:hover {
+                        background: darken($sidebar-color-background, 5%);
+                    }
                 }
             }
         }
     }
-}
 
-@media screen and (max-width: 992px) {
-
-    .sidebar {
-        top: 54px;
-        left: 0px;
+    &:hover,
+    &:active {
+        left: $sidebar-width-opened;
+        padding: {
+            left: 0;
+        }
     }
 }
 
