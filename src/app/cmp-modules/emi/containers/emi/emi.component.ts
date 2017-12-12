@@ -15,5 +15,4 @@ export class EmiComponent implements OnInit {
 
     ngOnInit() {
     }
-
 }
