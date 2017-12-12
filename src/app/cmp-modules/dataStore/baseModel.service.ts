@@ -7,8 +7,6 @@ import {
 } from 'angular2-jsonapi';
 import { Datastore } from './datastore';
 
-export type baseModelType = ModelType<JsonApiModel>;
-
 export interface FindOneParams {
     id: string;
     include?: string
