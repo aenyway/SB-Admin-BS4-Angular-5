@@ -3,12 +3,12 @@ import {
     JsonApiModelConfig
 } from 'angular2-jsonapi';
 
+export interface TocType {
+}
+
 @JsonApiModelConfig({
     type: 'toc'
 })
-
-export interface TocType {
-}
 
 export class Toc extends JsonApiModel {
 }

@@ -3,12 +3,12 @@ import {
     JsonApiModelConfig
 } from 'angular2-jsonapi';
 
+export interface LocationType {
+}
+
 @JsonApiModelConfig({
     type: 'location'
 })
-
-export interface LocationType {
-}
 
 export class Location extends JsonApiModel {
 }

@@ -3,12 +3,12 @@ import {
     JsonApiModelConfig
 } from 'angular2-jsonapi';
 
+export interface ImageType {
+}
+
 @JsonApiModelConfig({
     type: 'image'
 })
-
-export interface ImageType {
-}
 
 export class Image extends JsonApiModel {
 }

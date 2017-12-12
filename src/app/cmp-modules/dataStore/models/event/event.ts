@@ -12,10 +12,6 @@ import {
     Toc
 } from '../';
 
-@JsonApiModelConfig({
-    type: 'events'
-})
-
 export interface EventType {
     title: string;
     eventType: string;
@@ -30,6 +26,10 @@ export interface EventType {
     headerImage: Image;
     location: Location;
 }
+
+@JsonApiModelConfig({
+    type: 'events'
+})
 
 export class Event extends JsonApiModel {
     @Attribute()
