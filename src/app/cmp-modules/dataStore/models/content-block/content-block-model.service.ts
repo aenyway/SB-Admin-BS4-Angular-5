@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { BaseModelService } from '../../baseModel.service';
 import {
-    Event,
-    EventType
+    ContentBlock,
+    ContentBlockType
 } from './';
 
 @Injectable()
-export class EventModelService extends BaseModelService<Event, EventType> {
+export class ContentBlockModelService extends BaseModelService<ContentBlock, ContentBlockType> {
 }

@@ -71,14 +71,14 @@ export class Datastore extends JsonApiDatastore {
 
     }
 
-    public getSelectedEvent(): Observable<Event> {
-        let event: Event;
-        //event = this.peekRecord(Event, '5');
-        if (!event) {
-            return this.findRecord(Event, '5', {
-                include: 'toc.toc-entries'
-            });
-        }
-        return Observable.of(event);
-    }
+    // public getSelectedEvent(): Observable<Event> {
+    //     let event: Event;
+    //     //event = this.peekRecord(Event, '5');
+    //     if (!event) {
+    //         return this.findRecord(Event, '5', {
+    //             include: 'toc.toc-entries'
+    //         });
+    //     }
+    //     return Observable.of(event);
+    // }
 }

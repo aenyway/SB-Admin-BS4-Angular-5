@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import { BaseModelService } from '../../baseModel.service';
-import { ImageType } from './image';
+import {
+    Image,
+    ImageType
+} from './';
 
 @Injectable()
-export class ImageModelService extends BaseModelService<ImageType> {
+export class ImageModelService extends BaseModelService<Image, ImageType> {
 }

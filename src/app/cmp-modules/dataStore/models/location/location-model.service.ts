@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import { BaseModelService } from '../../baseModel.service';
-import { LocationType } from './location';
+import {
+    Location,
+    LocationType
+} from './';
 
 @Injectable()
-export class LocationModelService extends BaseModelService<LocationType> {
+export class LocationModelService extends BaseModelService<Location, LocationType> {
 }

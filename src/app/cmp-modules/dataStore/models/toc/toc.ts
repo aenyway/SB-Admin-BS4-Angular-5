@@ -1,14 +1,38 @@
 import {
+    Attribute,
+    BelongsTo,
+    HasMany,
     JsonApiModel,
     JsonApiModelConfig
 } from 'angular2-jsonapi';
+import { TocEntry } from './';
 
-export interface TocType {
+export class TocType extends JsonApiModel {
+    title: string;
+    key: string;
+    tocEntries: TocEntry[];
+    event: Event;
 }
 
 @JsonApiModelConfig({
-    type: 'toc'
+    type: 'tocs'
 })
 
 export class Toc extends JsonApiModel {
+    @Attribute()
+    title: string;
+
+    @Attribute()
+    key: string;
+
+    @HasMany({"key": "toc-entries"})
+    tocEntries: TocEntry[];
+
+    @BelongsTo()
+    event: Event;
+
+    private _hasChildren: boolean = false;
+    get hasChildren(): boolean {
+        return this.tocEntries != undefined && this.tocEntries.length > 0;
+    }
 }

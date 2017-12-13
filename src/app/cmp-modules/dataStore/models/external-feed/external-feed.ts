@@ -4,15 +4,15 @@ import {
     JsonApiModelConfig
 } from 'angular2-jsonapi';
 
-export class ImageType extends JsonApiModel {
+export class ExternalFeedType extends JsonApiModel {
     location: string;
 }
 
 @JsonApiModelConfig({
-    type: 'images'
+    type: 'external-feeds'
 })
 
-export class Image extends JsonApiModel {
+export class ExternalFeed extends JsonApiModel {
     @Attribute()
     location: string;
 }

@@ -1,7 +1,16 @@
 import { Injectable } from '@angular/core';
 import { BaseModelService } from '../../baseModel.service';
-import { TocType } from './toc';
+import {
+    Toc,
+    TocType,
+    TocEntry,
+    TocEntryType,
+} from './';
 
 @Injectable()
-export class TocModelService extends BaseModelService<TocType> {
+export class TocModelService extends BaseModelService<Toc, TocType> {
+}
+
+@Injectable()
+export class TocEntryModelService extends BaseModelService<TocEntry, TocEntryType> {
 }
