@@ -19,7 +19,7 @@ import {
     RouteModelService,
     TocModelService,
     TocEntryModelService,
-} from './models';
+} from './models/services';
 
 @NgModule({
     imports: [

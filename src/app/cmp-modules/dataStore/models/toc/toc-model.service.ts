@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { BaseModelService } from '../../baseModel.service';
 import {
     Toc,
-    TocType,
     TocEntry,
     TocEntryType,
+    TocType
 } from './';
 
 @Injectable()

@@ -36,6 +36,7 @@ export class AgendaItem extends JsonApiModel {
     timeEnd: string;
     @Attribute()
     timeLabel: string;
+
     @BelongsTo()
     agenda: Agenda;
 }

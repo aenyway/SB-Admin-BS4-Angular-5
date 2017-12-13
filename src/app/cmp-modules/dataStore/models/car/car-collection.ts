@@ -4,7 +4,7 @@ import {
     JsonApiModel,
     JsonApiModelConfig
 } from 'angular2-jsonapi';
-import { Car } from './';
+import { Car } from './car';
 
 export class CarCollectionType extends JsonApiModel {
     title: string;

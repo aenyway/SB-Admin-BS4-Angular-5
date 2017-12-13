@@ -2,10 +2,8 @@ import {
     Component,
     OnInit
 } from '@angular/core';
-import {
-    Event,
-    EventModelService
-} from '../../../dataStore/models';
+import { Event } from '../../../dataStore/models';
+import { EventModelService } from '../../../dataStore/models/services';
 import { Observable } from 'rxjs/Observable';
 
 @Component({

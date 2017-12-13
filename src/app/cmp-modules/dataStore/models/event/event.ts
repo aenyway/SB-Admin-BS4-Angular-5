@@ -6,11 +6,9 @@ import {
     JsonApiModelConfig
 } from 'angular2-jsonapi';
 
-import {
-    Image,
-    Location,
-    Toc
-} from '../';
+import { Image } from '../image';
+import { Location } from '../location';
+import { Toc } from '../toc';
 
 export interface EventType {
     title: string;
@@ -51,12 +49,13 @@ export class Event extends JsonApiModel {
 
     @HasOne({"key": "toc"})
     toc: Toc;
-    @HasMany({"key": "events"})
-    events: Event[];
     @HasOne({"key": "header-image"})
     headerImage: Image;
     @HasOne({"key": "location"})
     location: Location;
+
+    @HasMany({"key": "events"})
+    events: Event[];
 
     private _hasChildren: boolean = false;
     get hasChildren(): boolean {

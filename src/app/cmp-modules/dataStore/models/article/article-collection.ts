@@ -4,7 +4,7 @@ import {
     JsonApiModel,
     JsonApiModelConfig
 } from 'angular2-jsonapi';
-import { Article } from './';
+import { Article } from './article';
 
 export interface ArticleCollectionType {
     title: string;

@@ -53,7 +53,7 @@ export class BaseModelService<Model extends JsonApiModel, Type> {
     /**
      * returns all entities of the collection
      */
-    findAll(findAllParams: FindAllParams): Observable<Array<Model>> {
+    findAll(findAllParams: FindAllParams = {}): Observable<Array<Model>> {
         return this.findMany(findAllParams);
     }
 

@@ -5,7 +5,7 @@ import {
     JsonApiModel,
     JsonApiModelConfig
 } from 'angular2-jsonapi';
-import { TocEntry } from './';
+import { TocEntry } from './toc-entry';
 
 export class TocType extends JsonApiModel {
     title: string;
