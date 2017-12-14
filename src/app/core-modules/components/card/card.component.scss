@@ -1,0 +1,15 @@
+.card {
+
+    &-body {
+
+        &-icon {
+            font-size: 3em;
+            margin-right: 10px;
+        }
+
+        & > div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
