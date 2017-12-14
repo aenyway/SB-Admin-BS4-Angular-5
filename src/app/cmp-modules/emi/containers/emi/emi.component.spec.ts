@@ -3,6 +3,7 @@ import {
     ComponentFixture,
     TestBed
 } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { EmiComponent } from './emi.component';
 
@@ -11,9 +12,13 @@ describe('EmiComponent', () => {
     let fixture: ComponentFixture<EmiComponent>;
 
     beforeEach(async(() => {
-        TestBed.configureTestingModule({
-            declarations: [EmiComponent]
-        })
+        TestBed
+            .configureTestingModule(
+                {
+                    declarations: [EmiComponent],
+                    imports: [RouterTestingModule]
+                }
+            )
             .compileComponents();
     }));
 
