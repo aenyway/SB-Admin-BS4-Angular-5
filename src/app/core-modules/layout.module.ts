@@ -10,6 +10,8 @@ import {
     SideBarComponent,
     SideBarElementComponent
 } from './components';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
     imports: [
@@ -23,6 +25,8 @@ import {
         HeaderComponent,
         SideBarComponent,
         SideBarElementComponent,
+        LandingPageComponent,
+        CardComponent,
     ]
 })
 export class LayoutModule {

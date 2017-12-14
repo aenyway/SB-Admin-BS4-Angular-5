@@ -2,7 +2,7 @@ import {
     Component,
     Input
 } from '@angular/core';
-import { sideBarElementConfig } from '../side-bar-element/side-bar-element-config';
+import { Route } from '@angular/router';
 
 @Component({
     selector: 'cmp-admin-side-bar',
@@ -11,7 +11,7 @@ import { sideBarElementConfig } from '../side-bar-element/side-bar-element-confi
 })
 export class SideBarComponent {
 
-    @Input() config: Array<sideBarElementConfig>;
+    @Input() baseRoutes: Array<Route>;
 
     // TODO: move to state control
     isActive: boolean = false;

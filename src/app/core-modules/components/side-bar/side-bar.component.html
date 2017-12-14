@@ -1,6 +1,9 @@
-<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
-    <cmp-admin-side-bar-element *ngFor="let configElement of config"
-                                [configElement]="configElement"></cmp-admin-side-bar-element>
+<nav class="sidebar"
+     [ngClass]="{sidebarPushRight: isActive}">
+    <ng-container *ngFor="let baseRoute of baseRoutes">
+        <cmp-admin-side-bar-element *ngIf="baseRoute.loadChildren"
+                                    [baseRoute]="baseRoute"></cmp-admin-side-bar-element>
+    </ng-container>
 </nav>
 
 

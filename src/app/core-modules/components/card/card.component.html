@@ -1,0 +1,25 @@
+<div>
+    <ng-container *ngTemplateOutlet="card; context: baseRoute"></ng-container>
+</div>
+
+<ng-template #card
+             let-path="path"
+             let-data="data">
+
+    <div class="card text-white bg-warning o-hidden h-100">
+        <div class="card-body">
+            <div class="card-body-icon">
+                <i class="{{data?.icon}}"></i>
+            </div>
+            <div class="mr-5">{{ data?.title || path }}</div>
+        </div>
+        <a [routerLink]="'/' + path"
+           class="card-footer text-white clearfix small z-1">
+            <span class="float-left">{{ data?.subtitle || path }}</span>
+            <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+        </a>
+    </div>
+
+</ng-template>

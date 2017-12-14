@@ -1,34 +1,34 @@
-<div class="list-group" *ngIf="!configElement?.divider">
-    <div class="nested-menu" *ngIf="configElement?.items?.length">
+<div class="list-group">
 
-        <a class="list-group-item" (click)="addExpandClass(configElement.title)">
-            <span><i class="fa fa-fw fa-plus"></i>&nbsp; {{configElement.title}}</span>
-        </a>
+    <!-- TODO: filled by cmp-modules -->
+    <!--<div class="nested-menu" *ngIf="false">-->
 
-        <div class="nested" [class.expand]="showMenu === configElement.title">
-            <ul class="submenu">
-                <li *ngFor="let subItem of configElement.items">
-                    <ng-container *ngTemplateOutlet="link; context: subItem"></ng-container>
-                </li>
-            </ul>
-        </div>
+        <!--<a class="list-group-item" (click)="addExpandClass(configElement.title)">-->
+            <!--<span><i class="fa fa-fw fa-plus"></i>&nbsp; {{configElement.title}}</span>-->
+        <!--</a>-->
 
-    </div>
+        <!--<div class="nested" [class.expand]="showMenu === configElement.title">-->
+            <!--<ul class="submenu">-->
+                <!--<li *ngFor="let subItem of configElement.items">-->
+                    <!--<ng-container *ngTemplateOutlet="link; context: subItem"></ng-container>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
 
-    <div *ngIf="!configElement?.items?.length">
-        <ng-container *ngTemplateOutlet="link; context: configElement"></ng-container>
+    <!--</div>-->
+
+    <div>
+        <ng-container *ngTemplateOutlet="element; context: baseRoute"></ng-container>
     </div>
 
 </div>
 
-<ng-template #link let-routes="routes" let-title="title" let-icon="icon">
-    <a [routerLink]="routes"
+<ng-template #element
+             let-path="path"
+             let-data="data">
+    <a [routerLink]="'/' + path"
        [routerLinkActive]="['router-link-active']"
        class="list-group-item">
-        <i class="{{icon}}"></i>&nbsp; {{ title }}
+        <i class="{{data?.icon}}"></i>&nbsp; {{ data?.title || path }}
     </a>
 </ng-template>
-
-<div class="list-group" *ngIf="configElement?.divider">
-    <hr>
-</div>

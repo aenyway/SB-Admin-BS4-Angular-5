@@ -2,10 +2,9 @@ import {
     Component,
     OnInit
 } from '@angular/core';
-import {
-    generateMockedSideBarConfig,
-    sideBarElementConfig
-} from './components';
+
+import { Route } from '@angular/router';
+import { routes } from './layout.routes';
 
 @Component({
     selector: 'app-layout',
@@ -14,7 +13,7 @@ import {
 })
 export class LayoutComponent implements OnInit {
 
-    sideBarConfig: Array<sideBarElementConfig> = generateMockedSideBarConfig();
+    baseRoutes: Array<Route> = routes;
 
     constructor() {
     }

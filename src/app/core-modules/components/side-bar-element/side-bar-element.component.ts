@@ -2,6 +2,7 @@ import {
     Component,
     Input
 } from '@angular/core';
+import { Route } from '@angular/router';
 
 @Component({
     selector: 'cmp-admin-side-bar-element',
@@ -11,7 +12,7 @@ import {
 export class SideBarElementComponent {
     showMenu: string = '';
 
-    @Input() configElement: any;
+    @Input() baseRoute: Route;
 
     addExpandClass(element: any) {
         if (element === this.showMenu) {
