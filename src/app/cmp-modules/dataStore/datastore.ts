@@ -35,7 +35,7 @@ import {
 
 const config: DatastoreConfig = {
     baseUrl: 'assets',
-    // baseUrl: 'http://memedia-fake-erm.dev/api/v1',
+    // baseUrl: 'https://api-dev1.media.compuccino.tv/v2/eventapi/v1',
     models: {
         'events': Event,
         'locations': Location,

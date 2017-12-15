@@ -5,7 +5,6 @@ import {
     ModelType
 } from 'angular2-jsonapi';
 import { Datastore } from './datastore';
-import { Injectable } from '@angular/core';
 
 export interface FindOneParams {
     id: string;
@@ -53,7 +52,6 @@ export abstract class BaseModelService<T extends JsonApiModel> {
      * returns all entities of the collection
      */
     findAll(findAllParams: FindAllParams = {}): Observable<Array<T>> {
-        console.log("this.modelType", this.modelType);
         return this.findMany(findAllParams);
     }
 
