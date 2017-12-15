@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { LayoutRoutingModule } from './layout-routing.module';
-import { LayoutComponent } from './layout.component';
+import { CoreRoutingModule } from './core-routing.module';
+import { CoreComponent } from './core.component';
 import {
     HeaderComponent,
     SideBarComponent,
@@ -16,12 +16,12 @@ import { CardComponent } from './components/card/card.component';
 @NgModule({
     imports: [
         CommonModule,
-        LayoutRoutingModule,
+        CoreRoutingModule,
         TranslateModule,
         NgbDropdownModule.forRoot()
     ],
     declarations: [
-        LayoutComponent,
+        CoreComponent,
         HeaderComponent,
         SideBarComponent,
         SideBarElementComponent,
@@ -29,5 +29,5 @@ import { CardComponent } from './components/card/card.component';
         CardComponent,
     ]
 })
-export class LayoutModule {
+export class CoreModule {
 }

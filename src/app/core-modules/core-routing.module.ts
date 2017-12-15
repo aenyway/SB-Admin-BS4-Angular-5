@@ -3,14 +3,14 @@ import {
     RouterModule,
     Routes
 } from '@angular/router';
-import { LayoutComponent } from './layout.component';
+import { CoreComponent } from './core.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { routes } from './layout.routes';
+import { routes } from './core.routes';
 
 const _routes: Routes = [
     {
         path: '',
-        component: LayoutComponent,
+        component: CoreComponent,
         children: [
             ...[
                 {
@@ -31,5 +31,5 @@ const _routes: Routes = [
     imports: [RouterModule.forChild(_routes)],
     exports: [RouterModule]
 })
-export class LayoutRoutingModule {
+export class CoreRoutingModule {
 }

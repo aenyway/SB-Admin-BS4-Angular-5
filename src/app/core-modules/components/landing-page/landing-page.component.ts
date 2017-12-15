@@ -3,7 +3,7 @@ import {
     OnInit
 } from '@angular/core';
 import { Route } from '@angular/router';
-import { routes } from '../../layout.routes';
+import { routes } from '../../core.routes';
 
 @Component({
     selector: 'cmp-admin-landing-page',

@@ -4,7 +4,7 @@ import {
     TestBed
 } from '@angular/core/testing';
 
-import { LayoutComponent } from './layout.component';
+import { CoreComponent } from './core.component';
 import {
     HeaderComponent,
     SideBarComponent,
@@ -13,15 +13,15 @@ import {
 import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateModule } from '@ngx-translate/core';
 
-describe('LayoutComponent', () => {
-    let component: LayoutComponent;
-    let fixture: ComponentFixture<LayoutComponent>;
+describe('CoreComponent', () => {
+    let component: CoreComponent;
+    let fixture: ComponentFixture<CoreComponent>;
 
     beforeEach(
         async(() => {
             TestBed.configureTestingModule({
                 declarations: [
-                    LayoutComponent,
+                    CoreComponent,
                     HeaderComponent,
                     SideBarComponent,
                     SideBarElementComponent
@@ -35,7 +35,7 @@ describe('LayoutComponent', () => {
     );
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(LayoutComponent);
+        fixture = TestBed.createComponent(CoreComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
