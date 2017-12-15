@@ -2,9 +2,11 @@ import {
     Component,
     OnInit
 } from '@angular/core';
-import { Event } from '../../../dataStore/models';
 import { EventModelService } from '../../../dataStore/models/services';
 import { Observable } from 'rxjs/Observable';
+import { EventType } from '../../../dataStore/models/event/event';
+import { BaseModelService } from '../../../dataStore/baseModel.service';
+import { Event } from '../../../dataStore/models/';
 
 @Component({
     selector: 'cmp-admin-event-collection',
@@ -13,12 +15,14 @@ import { Observable } from 'rxjs/Observable';
 })
 export class EventCollectionComponent implements OnInit {
 
-    eventCollection$: Observable<Array<Event>>;
+    eventCollection$: Observable<Array<EventType>>;
 
     constructor(private eventModelService: EventModelService) {
-        this.eventCollection$ = this.eventModelService.findAll();
+        // this.eventCollection$ = this.eventModelService.findAll();
     }
 
     ngOnInit() {
+        this.eventCollection$ = this.eventModelService.findAll();
+        // this.eventCollection$ =
     }
 }

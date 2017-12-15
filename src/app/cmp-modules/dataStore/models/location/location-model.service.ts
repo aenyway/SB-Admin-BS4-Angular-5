@@ -6,5 +6,5 @@ import {
 } from './';
 
 @Injectable()
-export class LocationModelService extends BaseModelService<Location, LocationType> {
+export class LocationModelService extends BaseModelService<Location> {
 }

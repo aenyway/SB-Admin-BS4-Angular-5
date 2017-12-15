@@ -1,0 +1,27 @@
+{
+    "data": [
+        {
+            "type": "events",
+            "id": "1",
+            "attributes": {
+                "event-type": "worldpremiere",
+                "title": "IAA 2017",
+                "sub-title": "#MBIAA",
+                "start-date": "2017-09-12T00:00:00+00:00",
+                "end-date": "2017-09-24T00:00:00+00:00",
+                "embargo-date": "2017-09-12T00:00:00+00:00",
+                "mpc-deadline": 1,
+                "mpc-deadline-photo": 10,
+                "emergency-phone": "+49 000 000",
+                "hashtag": "#CreatetheNew"
+            },
+            "relationships": {
+            },
+            "links": {
+                "self": "https:\/\/api-dev1.media.compuccino.tv\/v2\/eventapi\/v1\/events\/1"
+            }
+        },
+    ],
+    "included": [
+    ]
+}

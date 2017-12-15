@@ -8,9 +8,11 @@ import {
 } from './';
 
 @Injectable()
-export class AgendaModelService extends BaseModelService<Agenda, AgendaType> {
+export class AgendaModelService extends BaseModelService<Agenda> {
+    modeltype = Agenda;
 }
 
 @Injectable()
-export class AgendaItemModelService extends BaseModelService<AgendaItem, AgendaItemType> {
+export class AgendaItemModelService extends BaseModelService<AgendaItem> {
+    modeltype = AgendaItem;
 }

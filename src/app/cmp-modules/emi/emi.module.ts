@@ -5,13 +5,19 @@ import { EmiRoutingModule } from './emi-routing.module';
 import { EmiComponent } from './containers/emi/emi.component';
 import { EventCollectionComponent } from './containers/event-collection/event-collection.component';
 import { EventComponent } from './containers/event/event.component';
+import { DatastoreModule } from '../dataStore/datastore.module';
 
 @NgModule({
     imports: [
         CommonModule,
-        EmiRoutingModule
+        EmiRoutingModule,
+        DatastoreModule,
     ],
-    declarations: [EmiComponent, EventCollectionComponent, EventComponent]
+    declarations: [
+        EmiComponent,
+        EventCollectionComponent,
+        EventComponent
+    ]
 })
 export class EmiModule {
 }

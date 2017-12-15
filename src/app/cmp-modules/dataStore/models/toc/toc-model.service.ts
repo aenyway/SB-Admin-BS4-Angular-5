@@ -8,9 +8,9 @@ import {
 } from './';
 
 @Injectable()
-export class TocModelService extends BaseModelService<Toc, TocType> {
+export class TocModelService extends BaseModelService<Toc> {
 }
 
 @Injectable()
-export class TocEntryModelService extends BaseModelService<TocEntry, TocEntryType> {
+export class TocEntryModelService extends BaseModelService<TocEntry> {
 }

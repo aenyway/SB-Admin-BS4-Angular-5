@@ -6,5 +6,5 @@ import {
 } from './';
 
 @Injectable()
-export class ContentBlockModelService extends BaseModelService<ContentBlock, ContentBlockType> {
+export class ContentBlockModelService extends BaseModelService<ContentBlock> {
 }

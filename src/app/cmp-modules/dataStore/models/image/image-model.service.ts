@@ -6,5 +6,5 @@ import {
 } from './';
 
 @Injectable()
-export class ImageModelService extends BaseModelService<Image, ImageType> {
+export class ImageModelService extends BaseModelService<Image> {
 }

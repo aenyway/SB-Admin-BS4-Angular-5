@@ -6,5 +6,5 @@ import {
 } from './';
 
 @Injectable()
-export class ExternalFeedModelService extends BaseModelService<ExternalFeed, ExternalFeedType> {
+export class ExternalFeedModelService extends BaseModelService<ExternalFeed> {
 }

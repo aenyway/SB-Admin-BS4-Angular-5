@@ -1,11 +1,11 @@
 import { Response } from '@angular/http';
-import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import {
     JsonApiModel,
     ModelType
 } from 'angular2-jsonapi';
 import { Datastore } from './datastore';
+import { Injectable } from '@angular/core';
 
 export interface FindOneParams {
     id: string;
@@ -24,10 +24,9 @@ export interface FindAllParams {
     include?: string
 }
 
-@Injectable()
-export class BaseModelService<Model extends JsonApiModel, Type> {
+export abstract class BaseModelService<T extends JsonApiModel> {
 
-    private modelType: ModelType<Model>;
+    modelType: ModelType<T>;
 
     constructor(private datastore: Datastore) {
     }
@@ -35,14 +34,14 @@ export class BaseModelService<Model extends JsonApiModel, Type> {
     /**
      * returns one entity of collection
      */
-    findOne(findOneParams: FindOneParams): Observable<Model> {
+    findOne(findOneParams: FindOneParams) {
         return this.datastore.findRecord(this.modelType, findOneParams.id, findOneParams.include);
     }
 
     /**
      * returns multiple entities of the collection
      */
-    findMany(findManyParams: FindManyParams): Observable<Array<Model>> {
+    findMany(findManyParams: FindManyParams): Observable<Array<T>> {
         return this.datastore
             .findAll(this.modelType, findManyParams)
             .map((foundAllEvents) => {
@@ -53,14 +52,15 @@ export class BaseModelService<Model extends JsonApiModel, Type> {
     /**
      * returns all entities of the collection
      */
-    findAll(findAllParams: FindAllParams = {}): Observable<Array<Model>> {
+    findAll(findAllParams: FindAllParams = {}): Observable<Array<T>> {
+        console.log("this.modelType", this.modelType);
         return this.findMany(findAllParams);
     }
 
     /**
      * Add one entity to the collection
      */
-    addOne(entity: Model, persist: boolean = true): Observable<Model> {
+    addOne(entity: T, persist: boolean = true): Observable<T> {
         const addOne = this.datastore.createRecord(this.modelType, entity);
         if (persist) {
             // TODO: what happens if the save-call fails?
@@ -82,11 +82,11 @@ export class BaseModelService<Model extends JsonApiModel, Type> {
      * Update one entity in the collection
      */
     updateOne(getOneParams: FindOneParams,
-              newAttributes: Partial<Type>, // we use type here because the JsonApiModel breaks the Partial
-              persist: boolean = true): Observable<Model> {
+              newAttributes: Partial<T>, // we use type here because the JsonApiModel breaks the Partial
+              persist: boolean = true): Observable<T> {
 
         return this.findOne(getOneParams)
-            .map((foundOne: Model) => {
+            .map((foundOne: T) => {
                 // set new attributes
                 Object.assign(foundOne, newAttributes);
 

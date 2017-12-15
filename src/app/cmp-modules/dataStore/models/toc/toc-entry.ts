@@ -2,7 +2,7 @@ import { Toc } from './toc';
 import {
     Attribute,
     BelongsTo,
-    HasOne,
+    // HasOne,
     JsonApiModel,
     JsonApiModelConfig
 } from 'angular2-jsonapi';
@@ -27,6 +27,6 @@ export class TocEntry extends JsonApiModel {
     @BelongsTo()
     toc: Toc;
 
-    @HasOne()
-    target: any;
+    // @HasOne()
+    // target: any;
 }

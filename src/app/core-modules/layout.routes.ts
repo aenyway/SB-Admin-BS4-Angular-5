@@ -23,8 +23,8 @@ export const routes: Array<Route> = [
         },
     },
     {
-        path: 'management',
-        loadChildren: '../cmp-modules/management/management.module#ManagementModule',
+        path: 'notifications',
+        loadChildren: '../cmp-modules/notifications/notifications.module#NotificationsModule',
         data: {
             title: 'Notifications',
             subtitle: 'Notifications',
@@ -41,8 +41,8 @@ export const routes: Array<Route> = [
         },
     },
     {
-        path: 'notifications',
-        loadChildren: '../cmp-modules/notifications/notifications.module#NotificationsModule',
+        path: 'management',
+        loadChildren: '../cmp-modules/management/management.module#ManagementModule',
         data: {
             title: 'App-Management',
             subtitle: 'App-Management',

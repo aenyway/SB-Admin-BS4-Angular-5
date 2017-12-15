@@ -34,7 +34,8 @@ import {
 
 
 const config: DatastoreConfig = {
-    baseUrl: 'http://memedia-fake-erm.dev/api/v1',
+    baseUrl: 'assets',
+    // baseUrl: 'http://memedia-fake-erm.dev/api/v1',
     models: {
         'events': Event,
         'locations': Location,
