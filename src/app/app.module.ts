@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrettyJsonModule, SafeJsonPipe } from 'angular2-prettyjson';
+import { JsonPipe } from '@angular/common';
+
 import {
     HttpClient,
     HttpClientModule
@@ -37,9 +40,13 @@ export function createTranslateLoader(http: HttpClient) {
             }
         }),
         AppRoutingModule,
+        PrettyJsonModule,
     ],
     declarations: [AppComponent],
-    providers: [AuthGuard],
+    providers: [
+        AuthGuard,
+        { provide: JsonPipe, useClass: SafeJsonPipe }
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

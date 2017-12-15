@@ -20,7 +20,7 @@
             "links": {
                 "self": "https:\/\/api-dev1.media.compuccino.tv\/v2\/eventapi\/v1\/events\/1"
             }
-        },
+        }
     ],
     "included": [
     ]

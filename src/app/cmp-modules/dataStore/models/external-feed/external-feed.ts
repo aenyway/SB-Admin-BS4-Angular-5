@@ -2,7 +2,7 @@ import {
     Attribute,
     JsonApiModel,
     JsonApiModelConfig
-} from 'angular2-jsonapi';
+} from 'angular-jsonapi-client';
 
 export class ExternalFeedType extends JsonApiModel {
     location: string;

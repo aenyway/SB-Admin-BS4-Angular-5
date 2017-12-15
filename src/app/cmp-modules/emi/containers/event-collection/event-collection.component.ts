@@ -23,6 +23,9 @@ export class EventCollectionComponent implements OnInit {
 
     ngOnInit() {
         this.eventCollection$ = this.eventModelService.findAll();
+        this.eventModelService.findAll().subscribe(
+            (events: Event[]) => console.log(events)
+        );        
         // this.eventCollection$ =
     }
 }

@@ -4,7 +4,7 @@ import {
     HasMany,
     JsonApiModel,
     JsonApiModelConfig
-} from 'angular2-jsonapi';
+} from 'angular-jsonapi-client';
 import { TocEntry } from './toc-entry';
 
 export class TocType extends JsonApiModel {

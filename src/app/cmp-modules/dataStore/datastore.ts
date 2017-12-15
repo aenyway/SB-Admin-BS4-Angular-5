@@ -7,7 +7,7 @@ import {
     DatastoreConfig,
     JsonApiDatastore,
     JsonApiDatastoreConfig
-} from 'angular2-jsonapi';
+} from 'angular-jsonapi-client';
 import { Observable } from 'rxjs/Observable';
 
 // Models
@@ -34,8 +34,8 @@ import {
 
 
 const config: DatastoreConfig = {
-    baseUrl: 'assets',
-    // baseUrl: 'http://memedia-fake-erm.dev/api/v1',
+    //baseUrl: 'assets',
+    baseUrl: 'http://memedia-fake-erm-stable.dev/api/v1',
     models: {
         'events': Event,
         'locations': Location,

@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import {
     JsonApiModel,
     ModelType
-} from 'angular2-jsonapi';
+} from 'angular-jsonapi-client';
 import { Datastore } from './datastore';
 import { Injectable } from '@angular/core';
 
