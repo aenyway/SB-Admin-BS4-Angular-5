@@ -4,7 +4,7 @@ import {
     BelongsTo,
     JsonApiModel,
     JsonApiModelConfig
-} from 'angular2-jsonapi';
+} from 'angular-jsonapi-client';
 
 export interface AgendaItemType {
     title: string;

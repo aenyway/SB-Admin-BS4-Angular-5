@@ -4,7 +4,7 @@ import {
 } from '@angular/core/testing';
 
 import { BaseModelService } from './baseModel.service';
-import { JsonApiModel } from 'angular2-jsonapi';
+import { JsonApiModel } from 'angular-jsonapi-client';
 import { DatastoreModule } from './datastore.module';
 
 export interface Type {
@@ -18,7 +18,7 @@ describe('BaseModelService', () => {
         });
     });
 
-    it('should be created', inject([BaseModelService], (service: BaseModelService<JsonApiModel, Type>) => {
+    it('should be created', inject([BaseModelService], (service: BaseModelService<JsonApiModel>) => {
         expect(service).toBeTruthy();
     }));
 });

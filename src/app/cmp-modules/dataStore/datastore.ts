@@ -7,7 +7,7 @@ import {
     DatastoreConfig,
     JsonApiDatastore,
     JsonApiDatastoreConfig
-} from 'angular2-jsonapi';
+} from 'angular-jsonapi-client';
 import { Observable } from 'rxjs/Observable';
 
 // Models

@@ -3,7 +3,7 @@ import {
     HasMany,
     JsonApiModel,
     JsonApiModelConfig
-} from 'angular2-jsonapi';
+} from 'angular-jsonapi-client';
 import { Route } from './';
 
 export class RouteCollectionType extends JsonApiModel {

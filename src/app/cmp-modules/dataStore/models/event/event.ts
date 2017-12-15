@@ -1,10 +1,10 @@
 import {
     Attribute,
     HasMany,
-    // HasOne,
+    HasOne,
     JsonApiModel,
     JsonApiModelConfig
-} from 'angular2-jsonapi';
+} from 'angular-jsonapi-client';
 
 import { Image } from '../image';
 import { Location } from '../location';
@@ -47,12 +47,12 @@ export class Event extends JsonApiModel {
     @Attribute({"serializedName": "hashtag"})
     hashtag: string;
 
-    // @HasOne({"key": "toc"})
-    // toc?: Toc;
-    // @HasOne({"key": "header-image"})
-    // headerImage?: Image;
-    // @HasOne({"key": "location"})
-    // location?: Location;
+    @HasOne({"key": "toc"})
+    toc?: Toc;
+    @HasOne({"key": "header-image"})
+    headerImage?: Image;
+    @HasOne({"key": "location"})
+    location?: Location;
 
     @HasMany({"key": "events"})
     events?: Event[];

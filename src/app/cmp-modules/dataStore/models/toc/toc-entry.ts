@@ -2,10 +2,10 @@ import { Toc } from './toc';
 import {
     Attribute,
     BelongsTo,
-    // HasOne,
+    HasOne,
     JsonApiModel,
     JsonApiModelConfig
-} from 'angular2-jsonapi';
+} from 'angular-jsonapi-client';
 
 export class TocEntryType extends JsonApiModel {
     title: string;
@@ -27,6 +27,6 @@ export class TocEntry extends JsonApiModel {
     @BelongsTo()
     toc: Toc;
 
-    // @HasOne()
-    // target: any;
+    @HasOne()
+    target: any;
 }

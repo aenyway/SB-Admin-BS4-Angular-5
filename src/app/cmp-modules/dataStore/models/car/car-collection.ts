@@ -3,7 +3,7 @@ import {
     HasMany,
     JsonApiModel,
     JsonApiModelConfig
-} from 'angular2-jsonapi';
+} from 'angular-jsonapi-client';
 import { Car } from './car';
 
 export class CarCollectionType extends JsonApiModel {
