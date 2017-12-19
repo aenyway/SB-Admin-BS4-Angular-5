@@ -6,11 +6,6 @@ import {
 } from 'angular-jsonapi-client';
 import { Person } from './';
 
-export interface PersonCollectionType {
-    title: string;
-    people: Person[];
-}
-
 @JsonApiModelConfig({
     type: 'person-collections'
 })

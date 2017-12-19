@@ -10,21 +10,6 @@ import { Image } from '../image';
 import { Location } from '../location';
 import { Toc } from '../toc';
 
-export interface EventType {
-    title: string;
-    eventType: string;
-    subtitle: string;
-    startDate: Date;
-    endDate: Date;
-    embargoDate: Date;
-    emergencyPhone: string;
-    hashtag: string;
-    toc?: Toc;
-    events?: Event[];
-    headerImage?: Image;
-    location?: Location;
-}
-
 @JsonApiModelConfig({
     type: 'events'
 })

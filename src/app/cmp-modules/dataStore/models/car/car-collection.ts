@@ -6,11 +6,6 @@ import {
 } from 'angular-jsonapi-client';
 import { Car } from './car';
 
-export class CarCollectionType extends JsonApiModel {
-    title: string;
-    cars: Car[];
-}
-
 @JsonApiModelConfig({
     type: 'car-collections'
 })

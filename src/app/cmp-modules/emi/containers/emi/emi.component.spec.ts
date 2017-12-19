@@ -6,6 +6,7 @@ import {
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { EmiComponent } from './emi.component';
+import { EmiModule } from '../../emi.module';
 
 describe('EmiComponent', () => {
     let component: EmiComponent;
@@ -15,8 +16,10 @@ describe('EmiComponent', () => {
         TestBed
             .configureTestingModule(
                 {
-                    declarations: [EmiComponent],
-                    imports: [RouterTestingModule]
+                    imports: [
+                        RouterTestingModule,
+                        EmiModule
+                    ]
                 }
             )
             .compileComponents();

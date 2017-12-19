@@ -6,11 +6,6 @@ import {
 } from 'angular-jsonapi-client';
 import { Article } from './article';
 
-export interface ArticleCollectionType {
-    title: string;
-    articles: Article[];
-}
-
 @JsonApiModelConfig({
     type: 'article-collections'
 })

@@ -4,16 +4,6 @@ import {
     JsonApiModelConfig
 } from 'angular-jsonapi-client';
 
-export class PersonType extends JsonApiModel {
-    firstName: string;
-    lastName: string;
-    role: string;
-    mail: string;
-    phone: string;
-    mobile: string;
-    fax: string;
-}
-
 @JsonApiModelConfig({
     type: 'people'
 })

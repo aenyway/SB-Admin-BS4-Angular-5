@@ -6,11 +6,6 @@ import {
 } from 'angular-jsonapi-client';
 import { ContentBlock } from '../content-block';
 
-export interface ArticleType {
-    title: string;
-    contentBlocks: ContentBlock[];
-}
-
 @JsonApiModelConfig({
     type: 'articles'
 })

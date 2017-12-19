@@ -4,10 +4,6 @@ import {
     JsonApiModelConfig
 } from 'angular-jsonapi-client';
 
-export class ImageType extends JsonApiModel {
-    location: string;
-}
-
 @JsonApiModelConfig({
     type: 'images'
 })

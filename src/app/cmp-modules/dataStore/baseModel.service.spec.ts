@@ -7,14 +7,15 @@ import { BaseModelService } from './baseModel.service';
 import { JsonApiModel } from 'angular-jsonapi-client';
 import { DatastoreModule } from './datastore.module';
 
-export interface Type {
-}
-
 describe('BaseModelService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [BaseModelService],
-            imports: [DatastoreModule],
+            providers: [
+                BaseModelService
+            ],
+            imports: [
+                DatastoreModule
+            ],
         });
     });
 

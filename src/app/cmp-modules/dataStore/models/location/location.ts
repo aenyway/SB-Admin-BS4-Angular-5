@@ -4,24 +4,6 @@ import {
     JsonApiModelConfig
 } from 'angular-jsonapi-client';
 
-export class LocationType extends JsonApiModel {
-    title: string;
-    locationType: string;
-    subtitle: string;
-    headline: string;
-    text: string;
-    street: string;
-    city: string;
-    postal: string;
-    country: string;
-    telephone: string;
-    website: string;
-    lat: string;
-    lng: string;
-    warningVisibility: string;
-    warningText: string;
-}
-
 @JsonApiModelConfig({
     type: 'locations'
 })

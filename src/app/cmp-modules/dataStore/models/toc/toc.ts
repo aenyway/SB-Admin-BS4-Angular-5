@@ -7,13 +7,6 @@ import {
 } from 'angular-jsonapi-client';
 import { TocEntry } from './toc-entry';
 
-export class TocType extends JsonApiModel {
-    title: string;
-    key: string;
-    tocEntries: TocEntry[];
-    event: Event;
-}
-
 @JsonApiModelConfig({
     type: 'tocs'
 })

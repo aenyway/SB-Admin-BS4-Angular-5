@@ -33,7 +33,7 @@ export abstract class BaseModelService<T extends JsonApiModel> {
     /**
      * returns one entity of collection
      */
-    findOne(findOneParams: FindOneParams) {
+    findOne(findOneParams: FindOneParams): Observable<T> {
         return this.datastore.findRecord(this.modelType, findOneParams.id, findOneParams.include);
     }
 

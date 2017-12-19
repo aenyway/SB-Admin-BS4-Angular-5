@@ -6,11 +6,6 @@ import {
 } from 'angular-jsonapi-client';
 import { Route } from './';
 
-export class RouteCollectionType extends JsonApiModel {
-    title: string;
-    routes: Route[];
-}
-
 @JsonApiModelConfig({
     type: 'route-collections'
 })

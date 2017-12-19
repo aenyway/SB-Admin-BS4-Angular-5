@@ -6,17 +6,6 @@ import {
     JsonApiModelConfig
 } from 'angular-jsonapi-client';
 
-export interface AgendaItemType {
-    title: string;
-    agendaItemType: string;
-    subTitle: string;
-    timeType: string;
-    timeStart: string;
-    timeEnd: string;
-    timeLabel: string;
-    agenda: Agenda;
-}
-
 @JsonApiModelConfig({
     type: 'agendaItems'
 })

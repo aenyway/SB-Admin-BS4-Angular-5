@@ -4,10 +4,6 @@ import {
     JsonApiModelConfig
 } from 'angular-jsonapi-client';
 
-export class ContentBlockType extends JsonApiModel {
-    title: string;
-}
-
 @JsonApiModelConfig({
     type: 'content-blocks'
 })

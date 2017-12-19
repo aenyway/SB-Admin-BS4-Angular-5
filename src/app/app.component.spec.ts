@@ -6,6 +6,10 @@ import {
 
 import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import {
+    TranslateModule,
+    TranslateService
+} from '@ngx-translate/core';
 
 describe('AppComponent', () => {
     let component: AppComponent;
@@ -14,8 +18,13 @@ describe('AppComponent', () => {
     beforeEach(
         async(() => {
             TestBed.configureTestingModule({
-                declarations: [AppComponent],
-                imports: [RouterTestingModule]
+                declarations: [
+                    AppComponent
+                ],
+                imports: [
+                    RouterTestingModule,
+                    TranslateModule.forRoot()
+                ]
             }).compileComponents();
         })
     );

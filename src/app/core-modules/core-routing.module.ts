@@ -16,6 +16,7 @@ const _routes: Routes = [
                 {
                     path: '',
                     redirectTo: 'start',
+                    pathMatch: 'full'
                 },
                 {
                     path: 'start',
