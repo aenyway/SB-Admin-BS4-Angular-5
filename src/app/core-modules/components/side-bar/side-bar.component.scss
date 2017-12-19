@@ -17,77 +17,78 @@
     }
     border: none;
     background-color: $sidebar-color-background;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
 
-    & .sidebar-dropdown {
+    &-dropdown {
 
         & *:focus {
             border-radius: none;
             border: none;
         }
 
-        & .panel-title {
-            font-size: 1rem;
-            height: 50px;
-            margin-bottom: 0;
+        & .panel {
 
-            & a {
-                color: $sidebar-color-link;
-                text-decoration: none;
-                font-weight: 400;
-                background: $sidebar-color-background;
+            &-title {
+                font-size: 1rem;
+                height: 50px;
+                margin-bottom: 0;
 
-                & span {
-                    position: relative;
-                    display: block;
-                    padding: 0.75rem 1.5rem;
-                    padding-top: 1rem;
+                & a {
+                    color: $sidebar-color-link;
+                    text-decoration: none;
+                    font-weight: 400;
+                    background: $sidebar-color-background;
+
+                    & span {
+                        position: relative;
+                        display: block;
+                        padding: 0.75rem 1.5rem;
+                        padding-top: 1rem;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        color: $sidebar-color-link-hover;
+                        outline: none;
+                        outline-offset: -2px;
+                    }
+                }
+
+                &:hover {
+                    background: darken($sidebar-color-background, 5%);
                 }
             }
 
-            & a {
-                &:hover,
-                &:focus {
-                    color: $sidebar-color-link-hover;
-                    outline: none;
-                    outline-offset: -2px;
-                }
-            }
-        }
+            &-collapse {
+                border-radious: 0;
+                border: none;
 
-        & .panel-title:hover {
-            background: darken($sidebar-color-background, 5%);
-        }
+                & .panel-body {
 
-        & .panel-collapse {
-            border-radious: 0;
-            border: none;
+                    & .list-group-item {
+                        border-radius: 0;
+                        background-color: $sidebar-color-background;
+                        border: 0 solid transparent;
 
-            & .panel-body {
+                        & a {
+                            color: $sidebar-color-link;
 
-                & .list-group-item {
-                    border-radius: 0;
-                    background-color: $sidebar-color-background;
-                    border: 0 solid transparent;
+                            &:hover {
+                                color: $sidebar-color-link-hover;
+                            }
+                        }
+                    }
 
-                    & a {
-                        color: $sidebar-color-link;
+                    & .list-group-item{
 
                         &:hover {
-                            color: $sidebar-color-link-hover;
+                            background: darken($sidebar-color-background, 5%);
                         }
                     }
                 }
-
-                & .list-group-item{
-
-                    &:hover {
-                        background: darken($sidebar-color-background, 5%);
-                    }
-                }
             }
         }
+
     }
 
     &:hover,
@@ -96,6 +97,7 @@
         padding: {
             left: 0;
         }
+        overflow-y: auto;
     }
 }
 
